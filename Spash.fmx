@@ -1,0 +1,46 @@
+object frmSplash: TfrmSplash
+  Left = 558
+  Top = 240
+  Border.Styling = False
+  BorderIcons = []
+  BorderStyle = None
+  Caption = 'Quiz App'
+  ClientHeight = 96
+  ClientWidth = 396
+  Position = Designed
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  Left = 558
+  Top = 240
+  DesignerMasterStyle = 0
+  object rectMain: TRectangle
+    Align = Client
+    Fill.Color = claBeige
+    Size.Width = 396.000000000000000000
+    Size.Height = 96.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claChocolate
+    Stroke.Thickness = 2.000000000000000000
+    Stroke.Dash = DashDot
+    object lblInfo: TLabel
+      StyledSettings = [Family, FontColor]
+      Position.X = 24.000000000000000000
+      Position.Y = 13.000000000000000000
+      Size.Width = 364.000000000000000000
+      Size.Height = 72.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 35.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.HorzAlign = Center
+      Text = 'Welcome to the Quiz'
+      TabOrder = 2
+    end
+  end
+  object tmDelay: TTimer
+    Interval = 500
+    OnTimer = tmDelayTimer
+    Left = 8
+    Top = 8
+  end
+end

@@ -1,0 +1,119 @@
+object frmMain: TfrmMain
+  Left = 581
+  Top = 270
+  Caption = 'Quiz App'
+  ClientHeight = 448
+  ClientWidth = 404
+  Position = Designed
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  Left = 581
+  Top = 270
+  DesignerMasterStyle = 0
+  object loMain: TLayout
+    Align = Client
+    Size.Width = 404.000000000000000000
+    Size.Height = 448.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object lwFooter: TListView
+      ItemAppearanceClassName = 'TListItemAppearance'
+      ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Bottom
+      Position.Y = 398.000000000000000000
+      Size.Width = 404.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      StyleLookup = 'lwFooterStyle1'
+      object btnNext: TSpeedButton
+        Action = NextTabAction1
+        Cursor = crHandPoint
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 258.000000000000000000
+        Position.Y = 18.000000000000000000
+        Size.Width = 46.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'arrowrighttoolbutton'
+      end
+      object btnPrev: TSpeedButton
+        Action = PreviousTabAction1
+        Cursor = crHandPoint
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 60.000000000000000000
+        Position.Y = 18.000000000000000000
+        Size.Width = 64.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'arrowlefttoolbuttonbordered'
+      end
+      object btnScore: TSpeedButton
+        Cursor = crHandPoint
+        StyledSettings = [Family, FontColor]
+        Position.X = 312.000000000000000000
+        Position.Y = 12.000000000000000000
+        Size.Width = 84.000000000000000000
+        Size.Height = 29.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Your Score'
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.Font.StyleExt = {04070000000000000004000000}
+        OnClick = btnScoreClick
+      end
+    end
+    object lwHeader: TListView
+      ItemAppearanceClassName = 'TListItemAppearance'
+      ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Top
+      Size.Width = 404.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      StyleLookup = 'lwHeaderStyle1'
+      object lblCaption: TLabel
+        StyledSettings = [Family, FontColor]
+        Position.X = 130.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 184.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {04070000000000000004000000}
+        Text = 'Coding Quiz'
+        TabOrder = 0
+      end
+    end
+  end
+  object tcMain: TTabControl
+    Align = Fit
+    Size.Width = 404.000000000000000000
+    Size.Height = 356.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = None
+    OnChange = tcMainChange
+  end
+  object ActionList1: TActionList
+    Left = 264
+    Top = 44
+    object NextTabAction1: TNextTabAction
+      Category = 'Tab'
+      TabControl = tcMain
+    end
+    object PreviousTabAction1: TPreviousTabAction
+      Category = 'Tab'
+      TabControl = tcMain
+    end
+  end
+end
